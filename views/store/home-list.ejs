@@ -1,0 +1,83 @@
+<%- include('../partials/head') %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+
+    <body class="bg-slate-50 min-h-screen font-sans">
+        <%- include('../partials/nav') %>
+
+            <main class="py-12">
+                  <div class="max-w-7xl mx-auto px-6">
+
+                    <h1 class="text-6xl font-serif text-center text-slate-800 mb-12 ">
+                        Welcome to AirBnb
+
+                        <i class="fa-solid fa-house "></i>
+                    </h1>
+
+                    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <% registeredHomes.forEach(home=> { %>
+                            <li
+                                class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-1">
+                                <!-- House Image -->
+                                <div class="overflow-hidden">
+                                    <img src="<%= home.photoURL %>" alt="<%= home.houseName %>"
+                                        class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                                </div>
+
+
+                                <!-- Card Content -->
+                                <div class="p-5 pb-1">
+
+                                    <h2 class="text-2xl font-semibold font-serif leading-tight">
+                                        <%= home.houseName %>
+                                    </h2>
+
+
+                                    <p class="flex items-center gap-2 text-gray-500 mt-3">
+                                        <i class="fa-solid fa-location-dot "></i>
+                                        <%= home.location %>
+                                    </p>
+
+                                    <hr class="my-2 border-gray-200">
+
+                                    <div class="flex items-center justify-between mt-3">
+
+                                        <!-- Price -->
+                                        <div class="flex items-end gap-1">
+                                            <span class="text-2xl font-bold text-rose-500">
+                                                ₹<%= home.price %>
+                                            </span>
+
+                                            <span class="text-gray-500 text-sm mb-1">
+                                                / night
+                                            </span>
+                                        </div>
+
+                                        <!-- Rating -->
+                                        <span class="text-yellow-500 font-semibold">
+                                            <i class="fa-solid fa-star text-yellow-400"></i>
+                                            <%= home.rating %>
+                                        </span>
+
+                                    </div>
+
+
+
+                                </div>
+                                <button class="w-full bg-rose-500 hover:bg-rose-600
+                            text-white py-3 font-medium rounded-b-2xl
+                               transition duration-300">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                    Book
+                                </button>
+
+                            </li>
+                            <% }) %>
+                    </ul>
+
+                </div>
+            </main>
+    </body>
+
+    </html>
