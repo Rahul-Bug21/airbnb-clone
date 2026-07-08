@@ -1,0 +1,94 @@
+<%- include('../partials/head') %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    </head>
+
+    <body class="bg-gray-50">
+
+        <%- include('../partials/nav') %>
+
+            <main class="max-w-7xl mx-auto px-6 py-12">
+
+                <h1 class="text-5xl font-serif text-center text-slate-800 mb-12">
+                    <%= home.houseName %>
+                </h1>
+
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+
+                    <div class="grid md:grid-cols-2">
+
+                        <!-- Image -->
+
+                        <div class="overflow-hidden ">
+                            <img src="<%= home.photoURL %>" alt="<%= home.houseName %>"
+                                class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+
+                        <!-- Details -->
+
+                        <div class="p-10">
+
+                            <!-- Rating & Location -->
+                            <div class="flex items-center gap-8 mb-6">
+
+                                <div class="flex items-center gap-1">
+                                    <i class="fa-solid fa-star text-yellow-400"></i>
+                                    <span class="font-semibold text-slate-700">
+                                        <%= home.rating %>
+                                    </span>
+                                </div>
+
+                                <div class="flex items-center gap-2 text-gray-500">
+                                    <i class="fa-solid fa-location-dot text-rose-500"></i>
+                                    <span>
+                                        <%= home.location %>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <hr class="w-4/5 border-gray-300 my-6">
+
+                            <!-- Description -->
+
+                            <h2 class="text-2xl font-semibold text-slate-800 mb-4">
+                                About this stay <i class="fa-solid fa-house "></i>
+                            </h2>
+
+                            <p class="text-gray-600 leading-8 mt-4">
+                                <%= home.description
+                                    || "Experience a comfortable stay in one of our carefully selected homes. Perfect for relaxing vacations, family trips or weekend getaways."
+                                    %>
+                            </p>
+
+                            <hr class="w-4/5 border-gray-300 my-6">
+
+                            <!-- Price -->
+
+                            <div class="flex items-end gap-2 mb-4">
+
+                                <span class="text-4xl font-bold text-rose-500">
+                                    ₹<%= home.price %>
+                                </span>
+
+                                <span class="text-gray-500 text-lg mb-1">
+                                    / night
+                                </span>
+
+                            </div>
+
+                            <!-- Button -->
+                              <%- include('../partials/favorites') %>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+    </body>
+
+    </html>

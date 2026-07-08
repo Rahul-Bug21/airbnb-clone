@@ -65,12 +65,12 @@
 
 
                                 </div>
-                                <button class="w-full bg-rose-500 hover:bg-rose-600
-                            text-white py-3 font-medium rounded-b-2xl
-                               transition duration-300">
-                                    <i class="fa-solid fa-calendar-check"></i>
-                                    Book
-                                </button>
+                                <div>
+                                    <a href="/homes/<%=home.id %>"> Details</a>
+                                 <!-- Button -->
+                              <%- include('../partials/favorites',{home:home}) %>
+
+                                </div>
 
                             </li>
                             <% }) %>

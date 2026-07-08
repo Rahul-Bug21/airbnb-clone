@@ -10,18 +10,18 @@
                <div class="max-w-7xl mx-auto px-6">
 
                     <h1 class="text-6xl font-serif text-center text-slate-800 mb-12 ">
-                        Welcome to AirBnb
+                        Here are your Favourites
 
-                        <i class="fa-solid fa-house "></i>
+                        <i class="fa-solid fa-heart"></i>
                     </h1>
 
                     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <% registeredHomes.forEach(home=> { %>
+                        <% favouriteHomes.forEach(home=> { %>
                             <li
                                 class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 hover:-translate-y-1">
                                 <!-- House Image -->
                                 <div class="overflow-hidden">
-                                    <img src="<%= home.photoURL %>" alt="<%= home.houseName %>"
+                                    <img src="<%=home.photoURL %>" alt="<%=home.houseName %>"
                                         class="w-full h-64 object-cover transition duration-500 hover:scale-105">
                                 </div>
 
