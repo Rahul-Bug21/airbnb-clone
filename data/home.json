@@ -8,12 +8,12 @@
         "photoURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9L25TyYT9h2NZ-MbZVtopPcdzn5DUNw1l9oNT37IF80kjqphQufP6Pst&s=10"
     },
     {
-        "id": "2",
-        "houseName": "Haveli No.2",
-        "price": "1999",
+        "houseName": "Purani Haveli",
+        "price": "2199",
         "location": "Rajasthan",
         "rating": "4.7",
-        "photoURL": "https://www.holidify.com/images/cmsuploads/compressed/83d4854f-a41b-4441-b008-b19fee6ea596_20221124195239.jpg"
+        "photoURL": "https://www.holidify.com/images/cmsuploads/compressed/83d4854f-a41b-4441-b008-b19fee6ea596_20221124195239.jpg",
+        "id": "2"
     },
     {
         "id": "3",

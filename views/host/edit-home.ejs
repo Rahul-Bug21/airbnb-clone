@@ -1,0 +1,64 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/nav') %>
+
+            <div class="flex justify-center items-center ">
+                <h1 class="text-5xl font-bold text-red-500 mb-4">
+                    <%=editing ? "Edit" : "Register" %> your Home
+                </h1>
+            </div>
+
+            <main class="flex justify-center items-center m-3.5 ">
+                <form action="/host/<%=editing ? "edit-home" :"add-home"%>" method="POST" class="flex flex-col gap-4">
+                    <input type="hidden" name="id" value="<%=editing ? home.id : '' %>"/>
+                    <input 
+                        type="text" 
+                        name="houseName" 
+                        value="<%=editing ? home.houseName :''%>"
+                        placeholder="Enter your House name"
+                        class="border border-gray-400 rounded-md px-3 py-2 w-80" 
+                    />
+
+                    <input 
+                        type="text" 
+                        name="price" 
+                        value="<%=editing ? home.price :''%>"
+                        placeholder="Price per night"
+                        class="border border-gray-400 rounded-md px-3 py-2 w-80"
+                     />
+
+                    <input 
+                        type="text" 
+                        name="location" 
+                        value="<%=editing ? home.location :''%>"
+                        placeholder="Location"
+                        class="border border-gray-400 rounded-md px-3 py-2 w-80" 
+                    />
+
+                    <input 
+                        type="text" 
+                        name="rating" 
+                        value="<%=editing ? home.rating :''%>"
+                        placeholder="Rating"
+                        class="border border-gray-400 rounded-md px-3 py-2 w-80" 
+                    />
+
+                    <input 
+                        type="text" 
+                        name="photoURL" 
+                        value="<%=editing ? home.photoURL :''%>"
+                        placeholder="Enter photo URL"
+                        class="border border-gray-400 rounded-md px-3 py-2 w-80" 
+                    />
+
+                    <input 
+                        type="submit" 
+                        value="<%= editing ? " Update" : "Submit" %>"
+                        class="bg-red-500 text-white px-4 py-2 rounded-md cursor-pointer" 
+                    />
+                </form>
+            </main>
+    </body>
+
+    </html>

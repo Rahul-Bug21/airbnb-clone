@@ -68,3 +68,13 @@ exports.postAddToFavourites =(req,res,next)=>{
     })
    
 }
+exports.postRemoveFromFavourites =(req,res,next)=>{
+   const homeId = req.params.homeId;
+   Favourite.DeleteFavouriteById(homeId,error=>{
+    if(error){
+        console.log(error)
+    }
+    res.redirect("/favourites")
+   })
+    
+}
